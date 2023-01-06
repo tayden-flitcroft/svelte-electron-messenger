@@ -1,0 +1,11 @@
+dist
+node_modules
+out
+.env
+.idea
+.DS_Store
+package-lock.json
+.firebase_temp
+firebase-*
+firestore-*
+*.log
