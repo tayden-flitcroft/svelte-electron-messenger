@@ -12,6 +12,6 @@
         "target": "es2021",
         "strict": true
     },
-    "include": ["./src/**/*.ts", "./src/**/*.svelte", ".eslintrc.cjs"],
+    "include": ["./src/**/*.ts", "./src/**/*.svelte", ".eslintrc.cjs", "*.cjs"],
     "exclude": ["node_modules", "dist", "out"]
 }
