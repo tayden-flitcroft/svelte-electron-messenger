@@ -8,4 +8,4 @@ package-lock.json
 .firebase_temp
 firebase-*
 firestore-*
-*.log
+**/*.log

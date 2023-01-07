@@ -9,8 +9,8 @@ const createWindow = () => {
 		width: 1000,
 		height: 750,
 		webPreferences: {
-			nodeIntegration: true,
-		},
+			nodeIntegration: true
+		}
 	})
 
 	win.loadURL(

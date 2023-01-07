@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'development') {
 export const createUser = async (
 	emailAddress: string,
 	password: string
-): Promise<User|unknown> => {
+): Promise<User | unknown> => {
 	try {
 		const { user }: { user: User } = await createUserWithEmailAndPassword(
 			auth,
