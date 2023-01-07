@@ -9,7 +9,8 @@
     "build": "webpack",
     "build:electron": "npm run build && electron-forge make",
     "electron:dev": "wait-on tcp:3000 && NODE_ENV=development electron-forge start",
-    "firebase:dev": "firebase emulators:start --import=./.firebase_temp --export-on-exit"
+    "firebase:dev": "firebase emulators:start --import=./.firebase_temp --export-on-exit",
+    "publish": "electron-forge publish"
   },
   "author": "",
   "license": "ISC",
