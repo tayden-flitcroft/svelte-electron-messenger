@@ -1,17 +1,33 @@
 module.exports = {
-    packagerConfig: {},
-    rebuildConfig: {},
-    makers: [{
-        name: '@electron-forge/maker-squirrel',
-        config: {},
-    }, {
-        name: '@electron-forge/maker-zip',
-        platforms: ['darwin', 'linux'],
-    }, {
-        name: '@electron-forge/maker-deb',
-        config: {},
-    }, {
-        name: '@electron-forge/maker-rpm',
-        config: {},
-    }],
+	packagerConfig: {},
+	rebuildConfig: {},
+	makers: [
+		{
+			name: '@electron-forge/maker-squirrel',
+			config: {}
+		},
+		{
+			name: '@electron-forge/maker-zip',
+			platforms: ['darwin', 'linux']
+		},
+		{
+			name: '@electron-forge/maker-deb',
+			config: {}
+		},
+		{
+			name: '@electron-forge/maker-rpm',
+			config: {}
+		}
+	],
+	publishers: [
+		{
+			name: '@electron-forge/publisher-github',
+			config: {
+				repository: {
+					owner: 'tayden-flitcroft',
+					name: 'svelte-electron-messenger'
+				}
+			}
+		}
+	]
 }
