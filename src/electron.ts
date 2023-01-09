@@ -13,13 +13,17 @@ const createWindow = () => {
 		}
 	})
 
-	win.loadURL(
-		IS_DEV
-			? 'http://localhost:3000'
-			: `file://${path.join(__dirname, '../dist/index.html')}`
-	)
+	try {
+		win.loadURL(
+			IS_DEV
+				? 'http://localhost:3000'
+				: `file://${path.join(__dirname, '../dist/index.html')}`
+		)
+	} catch {
+		win.loadURL(`${path.join(__dirname, '../dist/index.html')}`)
+	}
 
-	IS_DEV && win.webContents.openDevTools({ mode: 'detach' })
+	win.webContents.openDevTools({ mode: 'detach' })
 }
 
 app.whenReady().then(createWindow)
