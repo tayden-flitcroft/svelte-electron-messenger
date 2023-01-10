@@ -1,7 +1,8 @@
 name: Build
 on:
-  - push
-  - pull_request
+#  - push
+#  - pull_request
+## hidden until development is completed
 jobs:
   build_on_mac:
     runs-on: macOS-latest

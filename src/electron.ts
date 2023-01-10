@@ -13,15 +13,11 @@ const createWindow = () => {
 		}
 	})
 
-	try {
-		win.loadURL(
-			IS_DEV
-				? 'http://localhost:3000'
-				: `file://${path.join(__dirname, '../dist/index.html')}`
-		)
-	} catch {
-		win.loadURL(`${path.join(__dirname, '../dist/index.html')}`)
-	}
+	win.loadURL(
+		IS_DEV
+			? 'http://localhost:3000'
+			: `file://${path.join(__dirname, '../dist/index.html')}` // Electron app works when built locally but does not work when built on server
+	)
 
 	win.webContents.openDevTools({ mode: 'detach' })
 }
