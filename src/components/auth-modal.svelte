@@ -121,24 +121,22 @@
 		]
 	$: days = (): { value: string; label: string }[] => {
 		const temp = [{ value: '', label: 'DD' }]
-		if (months.length) {
-			const numDays = new Date(+birthYear, +birthMonth, 0).getDate()
-			for (let i = 1; i <= numDays; i++) {
-				const value = (i < 10 ? '0' + i : i).toString()
-				temp.push({ value, label: value })
-			}
-			if (+birthDay > +temp[temp.length - 1].label) {
-				birthDay = ''
-			}
-			return temp
-		} else {
-			return temp
+
+		if (!months.length) return temp
+
+		const numDays = new Date(+birthYear, +birthMonth, 0).getDate()
+		for (let i = 1; i <= numDays; i++) {
+			const value = (i < 10 ? '0' + i : i).toString()
+			temp.push({ value, label: value })
 		}
+		if (+birthDay > +temp[temp.length - 1].label) {
+			birthDay = ''
+		}
+		return temp
 	}
 
 	const toggleTermsAndConditionsModal = () => {
 		showTermsAndConditionsModal = !showTermsAndConditionsModal
-		console.log(showTermsAndConditionsModal)
 	}
 
 	const validate = () => {
@@ -172,7 +170,8 @@
 
 	const handleSubmit = () => {
 		if (validate()) {
-			console.log('good')
+			console.log('validated')
+			// 	create account handler
 		}
 	}
 </script>
