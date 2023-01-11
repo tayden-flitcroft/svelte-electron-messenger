@@ -4,7 +4,7 @@
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "module": "commonjs",
+        "module": "es6",
         "moduleResolution": "Node",
         "outDir": "./dist",
         "preserveValueImports": false,

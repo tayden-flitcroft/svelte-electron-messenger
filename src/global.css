@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Hiragino Kaku Gothic Std;
+    src: local('../assets/fonts/Hiragino Kaku Gothic Std W8.otf');
+}
+@font-face {
+    font-family: Hiragino Kaku Gothic Pro;
+    src: local('../assets/fonts/Hiragino Kaku Gothic Pro W8.oth')
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Hiragino Kaku Gothic Pro, sans-serif
+}
+html, body { width: 100vw; height: 100vh; }
+body { background: #B8C1C3 }
+
+input[type='checkbox'], select {
+    cursor: pointer;
+}

@@ -21,7 +21,7 @@
 		"no-dupe-keys": 2,
 		"no-duplicate-case": 2,
 		"eqeqeq": [2, "smart"],
-		"quotes": ["error", "single"],
+		"quotes": ["warn", "single"],
 		"semi": ["error", "never"],
 		"indent": ["error", "tab"],
 		"no-nested-ternary": 2,
